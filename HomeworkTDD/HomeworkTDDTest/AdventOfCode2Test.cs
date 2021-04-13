@@ -20,5 +20,15 @@ namespace HomeworkTDDTest
 
         }
 
+        [TestCase(2020, 4, 40)]
+        public void Return_LotsOfNumbers(int num1, int num2, int num3)
+        {
+
+            Assert.That(Program.
+                GetProductOfThreeEntriesThatEqual2020(new int[] { num1, num2, num3 }),
+                Is.EqualTo(num1 * num2 * num3));
+
+        }
+
     }
 }
