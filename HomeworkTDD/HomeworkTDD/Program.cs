@@ -35,7 +35,29 @@ namespace HomeworkTDD
         public static int GetProductOfThreeEntriesThatEqual2020(int[] expenses)
         {
 
-            return 0;
+            foreach(var num1 in expenses)
+            {
+
+                foreach(var num2 in expenses)
+                {
+
+                    foreach(var num3 in expenses)
+                    {
+
+                        if(num1 + num2 + num3 == 2020)
+                        {
+
+                            return num1 * num2 * num3;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            return -1;
 
         }
 

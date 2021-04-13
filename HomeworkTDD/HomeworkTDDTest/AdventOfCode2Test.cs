@@ -20,7 +20,9 @@ namespace HomeworkTDDTest
 
         }
 
-        [TestCase(2020, 4, 40)]
+        [TestCase(1000, 1000, 20)]
+        [TestCase(2000, 0, 20)]
+        [TestCase(10, 10, 2000)]
         public void Return_LotsOfNumbers(int num1, int num2, int num3)
         {
 
