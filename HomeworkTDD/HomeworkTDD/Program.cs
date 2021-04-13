@@ -32,5 +32,12 @@ namespace HomeworkTDD
 
         }
 
+        public static int GetProductOfThreeEntriesThatEqual2020(int[] expenses)
+        {
+
+            return 0;
+
+        }
+
     }
 }

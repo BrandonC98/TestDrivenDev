@@ -31,7 +31,7 @@ namespace HomeworkTDDTest
         }
 
         [Test]
-        public void Test2()
+        public void Returns_TheCorrectNumberFromALargeSetOfData()
         {
 
             var expenses = Expenses();
@@ -43,7 +43,7 @@ namespace HomeworkTDDTest
         public static int[] Expenses()
         {
             List<int> expensesList = new List<int>();
-            StreamReader file = new StreamReader(@"C:\Users\Brandon\Documents\Sparta Global\Training\SDET weeks\Week 1\HomeworkTDD\HomeworkTDDTest\Resources\ExpenseSheet.txt");
+            StreamReader file = new StreamReader(@"C:\Users\Brandon\Documents\Sparta Global\Training\SDET weeks\Week 1\TestDrivenDev\HomeworkTDD\HomeworkTDDTest\Resources\ExpenseSheet.txt");
             string line;
 
             while((line = file.ReadLine()) != null)
