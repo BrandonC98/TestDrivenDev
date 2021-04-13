@@ -8,12 +8,11 @@ namespace HomeworkTDDTest
     class AdventOfCode2Test
     {
 
+        //what is the product of the three entries that sum to 2020?
+
         [Test]
         public void Return_ANumber()
         {
-
-            //var expense = AdventOfCodeDay1Test.Expenses();
-
             Assert.That(Program.
                 GetProductOfThreeEntriesThatEqual2020(new int[] { 2020, 0, 0 }),
                 Is.EqualTo(0));
@@ -29,6 +28,16 @@ namespace HomeworkTDDTest
             Assert.That(Program.
                 GetProductOfThreeEntriesThatEqual2020(new int[] { num1, num2, num3 }),
                 Is.EqualTo(num1 * num2 * num3));
+
+        }
+
+        [Test]
+        public void Returns_TheCorrectNumberFromALargeSetOfData()
+        {
+
+            var expenses = AdventOfCodeDay1Test.Expenses();
+
+            Assert.That(Program.GetProductOfThreeEntriesThatEqual2020(expenses), Is.EqualTo(230608320));
 
         }
 

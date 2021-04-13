@@ -8,10 +8,9 @@ namespace HomeworkTDDTest
 {
     public class AdventOfCodeDay1Test
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
+
+        //Find the two entries that sum to 2020,
+        //what do you get if you multiply them together?
 
         [Test]
         public void Returns_2020()
