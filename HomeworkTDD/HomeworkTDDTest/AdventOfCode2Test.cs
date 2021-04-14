@@ -30,5 +30,13 @@ namespace HomeworkTDDTest
 
         }
 
+        [Test]
+        public void Return_MinusOneIfNoTheInputDoesntEqual2020()
+        {
+
+            Assert.That(Program.GetProductOfThreeEntries2020(new int[] { 100, 1700, 50 }), Is.EqualTo(-1));
+
+        }
+
     }
 }
