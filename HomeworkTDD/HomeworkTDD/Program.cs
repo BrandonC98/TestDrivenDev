@@ -1,17 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace HomeworkTDD
 {
     public class Program
     {
-        static void Main(string[] args)
+
+        private static int[] Expenses()
         {
-            Console.WriteLine("Hello World!");
+            List<int> expensesList = new List<int>();
+            StreamReader file = new StreamReader(@"C:\Users\Brandon\Documents\Sparta Global\Training\SDET weeks\Week 1\TestDrivenDev\HomeworkTDD\HomeworkTDDTest\Resources\ExpenseSheet.txt");
+            string line;
+
+            while ((line = file.ReadLine()) != null)
+            {
+
+                expensesList.Add(Convert.ToInt32(line));
+
+            }
+
+            file.Close();
+
+            return expensesList.ToArray();
+
         }
 
-        public static int GetSumOfEntries2020(int[] expenses)
+        static void Main(string[] args)
+        {
+            //806656
+            Console.WriteLine(GetProductOfEntries2020(Expenses()));
+
+            //230608320
+            Console.WriteLine(GetProductOfThreeEntries2020(Expenses()));
+
+        }
+
+        public static int GetProductOfEntries2020(int[] expenses)
         {
 
             foreach(var num in expenses)
@@ -28,11 +54,11 @@ namespace HomeworkTDD
 
             }
 
-            return 0;
+            return -1;
 
         }
 
-        public static int GetProductOfThreeEntriesThatEqual2020(int[] expenses)
+        public static int GetProductOfThreeEntries2020(int[] expenses)
         {
 
             foreach(var num1 in expenses)
